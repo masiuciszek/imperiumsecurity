@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import mediaQueries, { mediaMax } from './mediaQueries';
 
 export const Container = styled.section`
   width: 100%;
@@ -38,9 +39,17 @@ export const Row = styled.div`
 `;
 
 export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: ${props => (props.grid ? 'grid' : 'flex')};
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+  grid-template-columns: ${props =>
+    props.wider
+      ? ` repeat(auto-fit, minmax(220px, 1fr));`
+      : `repeat(auto-fit, minmax(180px, 1fr));`};
   grid-template-rows: auto;
   grid-gap: 15px;
   justify-items: center;
+  ${mediaQueries.MobileM`
+  grid-gap: 25px;
+
+  `}
 `;

@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Grid } from './styled/Grid';
 import { transition } from '../styledHelpers.js/cssFunctions';
+import mediaQueries, { mediaMax } from './styled/mediaQueries';
 
 const Album = () => {
   let a;
   return (
     <>
       <StyledAlbum>
-        <Grid>
+        <Grid grid>
           <div className="photo photo1">
             <img src="https://source.unsplash.com/random" alt="unsplash" />{' '}
           </div>
@@ -117,5 +118,14 @@ const StyledAlbum = styled.div`
       width: 20rem;
     }
   }
+
+  ${mediaMax.MobileM`
+
+  .photo{
+        img{
+          width: 100%;
+        }
+    }
+  `}
 `;
 export default Album;
