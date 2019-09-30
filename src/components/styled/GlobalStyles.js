@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle} from 'styled-components';
 
 export const cl = {
   pink: '#D16BA5',
