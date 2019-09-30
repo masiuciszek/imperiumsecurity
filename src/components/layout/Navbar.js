@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { cl } from '../styled/GlobalStyles';
+
 
 const Navbar = () => {
   let a;
@@ -10,6 +11,7 @@ const Navbar = () => {
       <StyledNav>
         <div className="title">
           <h3>Marcell Ciszek</h3>
+
         </div>
       </StyledNav>
     </>

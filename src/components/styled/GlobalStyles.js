@@ -3,12 +3,14 @@ import { createGlobalStyle} from 'styled-components';
 export const cl = {
   pink: '#D16BA5',
   dark: '#1A1C1E',
+  dark2: '#263238',
   darkBrighter: '#1E2C2C',
   green: '#0c7574',
   greenLighter: '#3ca581',
   greenLighterLightest: '#90d37a',
   yellow: '#f9f871',
   white: '#fff',
+  bgWhite: '#fff',
 };
 
 export default createGlobalStyle`
@@ -28,9 +30,9 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: ${cl.white};
   font-family: 'Montserrat', sans-serif;
-  background-image: linear-gradient(to left top, #d16ba5, #a25f96, #775181, #514267, #333249, #30384f, #2e3e53, #2c4457, #2e6981, #2591a8, #1ebcc6, #3ce7dc);
+  background: ${props => props.theme.mode === 'dark' ? `${cl.dark2}` : `${cl.bgWhite}` };
+  color: ${props => props.theme.mode === 'dark' ? `${cl.bgWhite}` : `${cl.dark2}` };
 }
 
 
@@ -71,4 +73,12 @@ a{
   text-decoration: none;
 }
 
+.toggle-box{
+  padding: 1rem;
+  label{
+    input[type="checkbox"]{
+      display: none;
+    }
+  }
+}
 `;

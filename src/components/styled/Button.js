@@ -18,7 +18,7 @@ export const BtnPrimary = styled.button`
 export const StyledLink = styled.span`
   padding: 0.7rem 1rem;
   border: none;
-  background-image: linear-gradient(to right, ${cl.pink} 50%, #fee603 50%);
+  background-image: linear-gradient(to right, ${cl.pink} 50%, ${cl.green} 50%);
   background-position: 0;
   background-size: 200%;
   ${transition()};
@@ -31,7 +31,7 @@ export const StyledLink = styled.span`
 
   &:hover {
     background-position: -100%;
-    color: ${cl.dark};
+    color: ${cl.white};
   }
 
   ${mediaQueries.mobileXS`
