@@ -1,8 +1,9 @@
+/* eslint-disable react/forbid-prop-types */
 import React,{useState,useEffect} from 'react';
 import PropTypes from 'prop-types';
+import{ThemeProvider} from 'styled-components'
 import GlobalStyles from '../styled/GlobalStyles';
 import Navbar from './Navbar';
-import{ThemeProvider} from 'styled-components'
 import { Container } from '../styled/Grid';
 
 const getInitialTheme = () => {
@@ -17,18 +18,19 @@ const AppLayout = ({ children }) => {
   })
   return (
     <>
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <div className="toggle-box">
-        <label htmlFor="toggle">
-          <input type="checkbox" name="toggle" id="toggle" onClick={e => setTheme(theme.mode === 'dark' ? {mode:'light'} : {mode:'dark'})}/>
-        </label>
-      </div>
-      <Navbar/>
-      <Container>
-        <main className="main-app">{children}</main>
-      </Container>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <div className="toggle-box">
+          <label htmlFor="toggle">
+            <input type="checkbox" name="toggle" id="toggle" onClick={e => setTheme(theme.mode === 'dark' ? {mode:'light'} : {mode:'dark'})} />
+            <span className="slider round" />
+          </label>
+        </div>
+        <Navbar />
+        <Container className="container">
+          <main className="main-app">{children}</main>
+        </Container>
+      </ThemeProvider>
     </>
   );
 };

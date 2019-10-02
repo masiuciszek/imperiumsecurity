@@ -1,4 +1,5 @@
 import { createGlobalStyle} from 'styled-components';
+import { transition } from '../../styledHelpers.js/cssFunctions';
 
 export const cl = {
   pink: '#D16BA5',
@@ -74,10 +75,58 @@ a{
 }
 
 .toggle-box{
-  padding: 1rem;
+  position: absolute;
+  right: 4rem;
+  top: 2rem;
+
   label{
-    input[type="checkbox"]{
-      display: none;
+    position: relative;
+    display: inline-block;
+    width: 7rem;
+    height: 2.9rem;
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      &:checked + .slider {
+        background: ${cl.bgWhite};
+      }
+      &:focus + .slider{
+        box-shadow: 0 0 1px ${cl.dark2};
+      }
+      &:checked + .slider::before{
+        content: "🌑";
+        -webkit-transform: translateX(37px);
+        -ms-transform: translateX(37px);
+        transform: translateX(37px);
+      }
+    }
+    .slider{
+      position:absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: ${cl.dark2};
+      border-radius: 12rem;
+      ${transition()};
+      &::before{
+        position: absolute;
+        content: "🌞";
+        font-size: 2rem;
+        height: 2rem;
+        width: 2rem;
+        left: .4rem;
+        bottom: .6rem;
+        border-radius: 50%;
+        background-color: ${cl.white};
+        border-radius: 3px solid ${cl.pink};
+        ${transition()};
+      }
+      &::after{
+
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const transition = (
   amount = 'all',
   time = '300',

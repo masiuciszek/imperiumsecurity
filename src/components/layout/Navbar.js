@@ -11,7 +11,6 @@ const Navbar = () => {
       <StyledNav>
         <div className="title">
           <h3>Marcell Ciszek</h3>
-
         </div>
       </StyledNav>
     </>

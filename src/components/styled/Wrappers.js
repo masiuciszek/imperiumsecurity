@@ -1,15 +1,17 @@
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
+import mediaQueries, { mediaMax } from './mediaQueries';
 
 export const PageWrapper = styled.div`
   width: 100%;
-  margin: 0 auto;
-  padding: 0.5rem;
-  .title {
-    padding: 2.5rem 3.3rem;
-    h3,
-    a,
-    span {
-      margin-left: 1.2rem;
-    }
-  }
+
+  padding-right: 10rem;
+  padding-left: 10rem;
+  margin-right: auto;
+  margin-left: auto;
+  ${mediaMax.MobileM`
+  padding-right: 2rem;
+  padding-left: 2rem;
+  `}
+
 `;

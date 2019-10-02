@@ -8,11 +8,11 @@ import AppLayout from '../components/layout/AppLayout';
 const album = () => {
   return (
     <div>
-    <AppLayout>
-    <PageWrapper>
-    <Album/>
-    </PageWrapper>
-    </AppLayout>
+      <AppLayout>
+        <PageWrapper>
+          <Album />
+        </PageWrapper>
+      </AppLayout>
     </div>
   );
 };
