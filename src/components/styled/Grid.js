@@ -40,6 +40,23 @@ export const Row = styled.div`
   margin-left: -15px;
 `;
 
+export const WrappedRow = styled(Row)`
+flex-wrap: nowrap;
+width: 100%;
+height: 100%;
+margin: 17rem auto 0 auto;
+justify-content: center;
+div:first-child{
+  padding: 1.4rem 1rem;
+  display: flex;
+  align-items: center;
+${mediaMax.ipad`
+flex-direction: column;
+
+`}
+}
+`
+
 export const Grid = styled.div`
   display: ${props => (props.grid ? 'grid' : 'flex')};
   /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
@@ -55,3 +72,4 @@ export const Grid = styled.div`
 
   `}
 `;
+
