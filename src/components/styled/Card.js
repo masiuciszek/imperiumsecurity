@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cl } from './GlobalStyles';
 import { mediaMax } from './mediaQueries';
+import { transition } from '../../styledHelpers.js/cssFunctions';
 
 
 const Card = ({card}) => {
@@ -46,18 +47,34 @@ const StyledCard = styled.div`
     margin: .5rem 2rem;
     color: ${cl.white};
     position: relative;
-
+    ${transition()};
     box-shadow: 2px 2px 2px 1px ${props => props.theme.mode === 'dark' ? '#333' : '#ccc'};
+    .card-header{
+      h3{
+      padding: .5rem .1rem;
+      width: 100%;
+      text-align: left;
+      }
+    }
     .card-body{
       flex-grow: 1 auto;
+      p{
+        padding: .1rem .8rem;
+      }
 
     }
     .card-footer{
       position:absolute;
       bottom: 0;
+      font-size: 1.6rem;
     }
     ${mediaMax.ipad`
       width: 36rem;
 
     `}
+
+    &:hover{
+      transform: skewX(5deg) skewY(-5deg) scale(1.01);
+      z-index: 2;
+    }
 `;

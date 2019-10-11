@@ -72,6 +72,7 @@ ul,li{
 }
 a{
   text-decoration: none;
+  color: ${props => props.theme.mode === 'dark' ? `${cl.white} ` :  `${cl.dark} ` };
 }
 
 .toggle-box{

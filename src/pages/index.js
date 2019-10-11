@@ -5,7 +5,7 @@ import AppLayout from '../components/layout/AppLayout';
 import { PageWrapper } from '../components/styled/Wrappers';
 import { StyledLink } from '../components/styled/Button';
 import Title from '../components/styled/Title';
-import Hero from '../components/Hero';
+
 import Card from '../components/styled/Card';
 import cardData from '../data/cardData';
 import { WrappedRow } from '../components/styled/Grid';
