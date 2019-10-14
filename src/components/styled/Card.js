@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import React from 'react';
@@ -7,10 +8,12 @@ import { mediaMax } from './mediaQueries';
 import { transition } from '../../styledHelpers.js/cssFunctions';
 
 
-const Card = ({card}) => {
 
+
+const Card = ({card,toggle}) => {
   return (
-    <StyledCard>
+    <StyledCard onClick={toggle}>
+
       <div className="card-header">
         <h3>{card.headerTitle}</h3>
       </div>
@@ -47,8 +50,12 @@ const StyledCard = styled.div`
     margin: .5rem 2rem;
     color: ${cl.white};
     position: relative;
+    cursor: pointer;
+    transform: rotateX(30deg) rotateY(35deg);
+    perspective: 2200px;
     ${transition()};
-    box-shadow: 2px 2px 2px 1px ${props => props.theme.mode === 'dark' ? '#333' : '#ccc'};
+    box-shadow: 1px -4px 2px 2px ${props => props.theme.mode === 'dark' ? '#333' : '#ccc'};
+
     .card-header{
       h3{
       padding: .5rem .1rem;
@@ -77,4 +84,5 @@ const StyledCard = styled.div`
       transform: skewX(5deg) skewY(-5deg) scale(1.01);
       z-index: 2;
     }
+
 `;
