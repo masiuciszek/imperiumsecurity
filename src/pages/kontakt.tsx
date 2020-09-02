@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const IndexPage: React.FC = () => (
+const ContactPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people and TypeScript!</h1>
+    <SEO title="Kontakta oss" />
   </Layout>
 );
 
-export default IndexPage;
+export default ContactPage;
