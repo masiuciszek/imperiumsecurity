@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-typescript",
+  "name": "imperium security",
   "private": true,
-  "description": "TypeScript version of the default Gatsby starter",
+  "description": "imperium security web app",
   "version": "0.1.0",
-  "author": "Jongwoo Han <han980817@gmail.com>",
+  "author": "Marcell Ciszek <ciszekmarcell@gmail.com>",
   "dependencies": {
     "eslint-loader": "^3.0.4",
     "gatsby": "^2.20.24",
