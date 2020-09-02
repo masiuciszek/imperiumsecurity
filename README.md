@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [About](#about)
-* [Tools](#tools)
+- [About](#about)
+- [Tools](#tools)
 
 ## About <a name = "about"></a>
 
@@ -11,8 +11,8 @@ Web Site for imperium Security. Info on what they do and how they work. Able to 
 
 ## Tools <a name = "tools"></a>
 
-* React
-* Gatsby
-* Typescript
-* Styled Components
-* Graphql
+- React ⚛️
+- Gatsby 🅶
+- Typescript 💪🏻
+- Styled Components 💅🏻
+- Graphql 📉
