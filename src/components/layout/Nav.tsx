@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { IFixedObject } from "gatsby-background-image";
 import { handleFlex } from "../../utils/helpers";
-import FlexList from "../elements/lists/FlexList";
+import PageRouteList from "../elements/lists/PageRouteList";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import FixedIcon from "../elements/FixedIcon";
 import useToggle from "../../hooks/useToggle";
@@ -98,7 +98,8 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
         <Img fixed={fixed} />
       </NavTitle>
       {width >= 960 && (
-        <FlexList
+        <PageRouteList
+          isFlex
           className="layout-navigation-list-flex-list"
           onPageRoutes={pageRoutes.siteMetadata.pageRoutes}
         />

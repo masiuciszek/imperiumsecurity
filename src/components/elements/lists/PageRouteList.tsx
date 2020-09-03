@@ -5,10 +5,15 @@ import { HoverLink } from "../../styled/Links";
 
 interface FlexListProps {
   className: string;
+  isFlex: boolean;
   onPageRoutes: PageRoutes[];
 }
 
-const FlexList: React.FC<FlexListProps> = ({ className, onPageRoutes }) => {
+const FlexList: React.FC<FlexListProps> = ({
+  className,
+  onPageRoutes,
+  isFlex,
+}) => {
   return (
     <ul className={className}>
       {onPageRoutes.map(({ name, path }) => (
@@ -23,6 +28,9 @@ const FlexList: React.FC<FlexListProps> = ({ className, onPageRoutes }) => {
 export default styled(FlexList)`
   flex: 1;
   border: 2px solid red;
-  ${handleFlex("row", "space-between", "center")};
+  ${({ isFlex }) =>
+    isFlex
+      ? `${handleFlex("row", "space-between", "center")}`
+      : `${handleFlex("column", "center", "center")}`};
   padding: 1.5em 0.5em;
 `;
