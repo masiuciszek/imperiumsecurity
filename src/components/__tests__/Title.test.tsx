@@ -10,8 +10,8 @@ describe("<Test/>", () => {
     );
     expect(screen.getByTestId("elements-Title").textContent).toBe(mainTitle);
     expect(screen.getByText(subTitle)).toBeDefined();
-    // await expect(screen.findByText(subTitle)).toBeInTheDocument();
+    // expect(screen.getByText(/subTitle/i)).toBeInTheDocument();
 
-    // screen.debug();
+    screen.debug();
   });
 });

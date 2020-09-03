@@ -7,6 +7,20 @@ module.exports = {
     url: "https://www.imperiumsecurity.nu/", // No trailing slash allowed!
     image: "/images/security.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@CiszekMarcell",
+    pageRoutes: [
+      {
+        name: "hem",
+        path: "/",
+      },
+      {
+        name: "kontakt",
+        path: "/kontakt",
+      },
+      {
+        name: "arbeta med oss",
+        path: "/arbeta-med-oss",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-eslint`,

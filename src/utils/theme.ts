@@ -11,6 +11,7 @@ export const mainTheme: DefaultTheme = {
     rgbaLight: "rgba(255,255,255,0.6)",
   },
   size: {
+    navigationSize: "12em",
     h1: "3.052em",
     h2: "2.441em",
     h3: "1.953em",
@@ -51,6 +52,7 @@ export const secondaryTheme: DefaultTheme = {
     rgbaLight: "rgba(255,255,255,0.6)",
   },
   size: {
+    navigationSize: "12em",
     h1: "3.052em",
     h2: "2.441em",
     h3: "1.953em",
