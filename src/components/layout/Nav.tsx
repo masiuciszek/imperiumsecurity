@@ -97,13 +97,13 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
       <NavTitle to="/">
         <Img fixed={fixed} />
       </NavTitle>
-      {width >= 960 && (
-        <PageRouteList
-          isFlex
-          className="layout-navigation-list-flex-list"
-          onPageRoutes={pageRoutes.siteMetadata.pageRoutes}
-        />
-      )}
+
+      <PageRouteList
+        pageWidth={width}
+        onPageRoutes={pageRoutes.siteMetadata.pageRoutes}
+        on={isMenuOpen}
+      />
+
       {width <= 960 && (
         <FixedIcon
           toggleOn={toggleMenuOpen}
@@ -111,7 +111,6 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
           icon={lightIcon.node}
         />
       )}
-      {isMenuOpen && <h1>apa</h1>}
     </nav>
   );
 };
