@@ -28,6 +28,7 @@ const ColumnListStyles = styled(animated.ul)`
   width: 80%;
   background: ${(props) => props.theme.colors.rgbaDark};
   border: 1px solid ${({ theme }) => theme.colors.text};
+  z-index: 2;
   li {
     padding: 1em;
   }

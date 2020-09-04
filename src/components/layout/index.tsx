@@ -9,7 +9,6 @@ interface LayoutProps {}
 
 const Main = styled.main`
   margin: 0 auto;
-  max-width: ${({ theme }) => theme.size.maxWidth};
 `;
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

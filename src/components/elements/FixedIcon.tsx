@@ -27,4 +27,5 @@ export default styled(FixedIcon)`
   top: 1rem;
   right: 2rem;
   cursor: pointer;
+  z-index: 3;
 `;
