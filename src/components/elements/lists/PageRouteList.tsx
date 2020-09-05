@@ -13,7 +13,6 @@ interface FlexListProps {
 
 const FlexListStyles = styled(animated.ul)`
   flex: 1;
-  border: 2px solid red;
   ${handleFlex("row", "space-between", "center")};
   padding: 1.5em 0.5em;
   max-width: 40em;

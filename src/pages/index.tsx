@@ -2,6 +2,7 @@
 import { graphql, PageProps } from "gatsby";
 import * as React from "react";
 import Hero from "../components/elements/Hero";
+import Title from "../components/elements/Title";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Page } from "../components/styled/Page";
@@ -18,7 +19,12 @@ const IndexPage: React.FC<PageProps<HomePageQueryType>> = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Hero className="home-page-hero-background" large>
-      <h1>{data.homeData.siteMetadata.title}</h1>
+      <Title
+        className="homepage-title"
+        title={data.homeData.siteMetadata.title}
+        isCta
+        ctaPath="kontakt"
+      />
     </Hero>
     <Page>
       <p>

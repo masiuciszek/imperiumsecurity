@@ -2,6 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 export const mainTheme: DefaultTheme = {
   appSize: "100%",
+  borderRadius: "4px",
   colors: {
     background: "#131313",
     text: "#fffffe",
@@ -43,6 +44,7 @@ export const mainTheme: DefaultTheme = {
 
 export const secondaryTheme: DefaultTheme = {
   appSize: "100%",
+  borderRadius: "4px",
   colors: {
     background: "#fffffe",
     text: "#131313",

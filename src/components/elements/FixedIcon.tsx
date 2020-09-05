@@ -17,7 +17,7 @@ interface FixedIconProps {
 const FixedIcon: React.FC<FixedIconProps> = ({ icon, className, toggleOn }) => {
   return (
     <span className={className} onClick={toggleOn && toggleOn}>
-      <Img fixed={icon.childImageSharp.fixed} alt={`icon-${name}`} />
+      <Img fixed={icon.childImageSharp.fixed} alt={`icon-fixed-icon`} />
     </span>
   );
 };

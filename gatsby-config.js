@@ -7,6 +7,7 @@ module.exports = {
     url: "https://www.imperiumsecurity.nu/", // No trailing slash allowed!
     image: "/images/security.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@CiszekMarcell",
+    contact: "info@imperiumsecurity.nu",
     pageRoutes: [
       {
         name: "hem",

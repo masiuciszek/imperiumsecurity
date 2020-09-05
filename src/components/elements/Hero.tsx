@@ -58,9 +58,9 @@ export default styled(Hero)`
   min-height: ${({ large }) => (large ? `calc(100vh - 205px)` : `50vh`)};
   background-image: linear-gradient(
     to top right,
-    rgba(0, 0, 0, 0.7),
-    rgba(241, 213, 162, 0.3),
-    rgba(0, 0, 0, 0.7)
+    rgba(0, 0, 0, 0.86),
+    rgba(241, 213, 162, 0.2),
+    rgba(0, 0, 0, 0.8)
   );
   position: relative;
   opacity: 1 !important;

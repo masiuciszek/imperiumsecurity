@@ -26,3 +26,23 @@ export const HoverLink = styled(Link)`
     }
   }
 `;
+
+export const CtaLink = styled(HoverLink)`
+  font-size: 1.7em;
+  border: 3px solid ${({ theme }) => theme.colors.background};
+  text-align: center;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
+  width: 8em;
+  margin: 1em auto;
+  &:hover {
+    color: ${(props) => props.theme.colors.background};
+    width: 8.25em;
+    background: ${({ theme }) => theme.colors.text};
+    &:after {
+      width: 100%;
+      padding: 0.1rem;
+    }
+  }
+`;

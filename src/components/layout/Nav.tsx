@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { IFixedObject } from "gatsby-background-image";
-import { handleFlex } from "../../utils/helpers";
+import { above, handleFlex } from "../../utils/helpers";
 import PageRouteList from "../elements/lists/PageRouteList";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import FixedIcon from "../elements/FixedIcon";
@@ -36,6 +36,7 @@ const NAV_QUERY = graphql`
     }
     pageRoutes: site {
       siteMetadata {
+        contact
         pageRoutes {
           name
           path
@@ -65,6 +66,7 @@ interface NavQueryType {
   };
   pageRoutes: {
     siteMetadata: {
+      contact: string;
       pageRoutes: PageRoutes[];
     };
   };
@@ -75,9 +77,18 @@ interface NavProps {
 }
 
 const NavTitle = styled(Link)`
-  /* TODO: Delete */
-  border: 2px solid #fff;
   flex: 1;
+`;
+
+const ContactInfo = styled.a`
+  position: absolute;
+  color: ${({ theme }) => theme.colors.button};
+  top: 6rem;
+  right: 1rem;
+  ${above.medium`
+    right: 1rem;
+    top: 1rem;
+  `}
 `;
 
 const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
@@ -111,13 +122,15 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
           icon={lightIcon.node}
         />
       )}
+      <ContactInfo href={`mailto: ${pageRoutes.siteMetadata.contact}`}>
+        ✉️{pageRoutes.siteMetadata.contact}
+      </ContactInfo>
     </nav>
   );
 };
 
 export default styled(Nav)`
   padding: 1em;
-  border: 2px solid red;
   height: ${(props) => props.theme.size.navigationSize};
   ${handleFlex("row", "space-between", "center")};
   position: relative;
