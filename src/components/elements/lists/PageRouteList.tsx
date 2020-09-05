@@ -2,7 +2,7 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 
 import styled from "styled-components";
-import { handleFlex } from "../../../utils/helpers";
+import { below, handleFlex } from "../../../utils/helpers";
 import { HoverLink } from "../../styled/Links";
 
 interface FlexListProps {
@@ -16,6 +16,9 @@ const FlexListStyles = styled(animated.ul)`
   ${handleFlex("row", "space-between", "center")};
   padding: 1.5em 0.5em;
   max-width: 40em;
+  a {
+    color: ${({ theme }) => theme.colors.text};
+  }
 `;
 
 const ColumnListStyles = styled(animated.ul)`
@@ -33,7 +36,11 @@ const ColumnListStyles = styled(animated.ul)`
   }
   a {
     font-size: 2em;
+    color: ${({ theme }) => theme.colors.text};
   }
+  ${below.small`
+      width: 100%;
+  `}
 `;
 
 const FlexList: React.FC<FlexListProps> = ({ onPageRoutes, pageWidth, on }) => {

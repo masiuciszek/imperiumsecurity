@@ -23,7 +23,7 @@ const FixedIcon: React.FC<FixedIconProps> = ({ icon, className, toggleOn }) => {
 };
 
 export default styled(FixedIcon)`
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 2rem;
   cursor: pointer;

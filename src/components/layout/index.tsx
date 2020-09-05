@@ -4,6 +4,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import { mainTheme } from "../../utils/theme";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 interface LayoutProps {}
 
@@ -17,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <GlobalStyles />
       <Nav />
       <Main>{children}</Main>
+      <Footer className="main-footer" />
     </ThemeProvider>
   );
 };
