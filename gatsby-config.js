@@ -22,6 +22,23 @@ module.exports = {
         path: "/arbeta-med-oss",
       },
     ],
+    homeContent: [
+      {
+        name: "ordningsvakt",
+        text:
+          "En ordningsvakts uppgift är att upprätthålla den allmänna ordningen. Våra ordningsvakter arbetar alltid enligt polismyndighetens krav. Vi innehar en hög servicekänsla och vill få omgivningen att känna sig trygga med ett brett säkerhetstänk. Områden där ordningsvakter kan tjänstgöra är till exempel krog, restaurang, evenemang och handelsmiljöer.",
+      },
+      {
+        name: "entrévärd/Trygghetsvärd",
+        text:
+          "En värd kan användas inom flera olika serviceuppgifter som att få omgivningen att trivas, upprätthålla ett lugn på plats eller se till att åldersgräns, klädpolicy och att andra krav som krävs vid entrén efterföljs. Våra värdar vill ge gästerna ett gott första intryck och värdesätter personlig service högt. Områden där en värd kan tjänstgöra är till exempel krog, restaurang, event, konserter och privata tillställningar.",
+      },
+      {
+        name: "garderobiär",
+        text:
+          "Serviceinriktad personal som har hantering och ansvar för garderobsuppdrag. Bemöter stora som små sällskap på ett tillmötesgående sätt.",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-eslint`,

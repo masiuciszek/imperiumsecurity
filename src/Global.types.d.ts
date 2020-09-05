@@ -4,3 +4,8 @@ interface PageRoutes {
 }
 
 type VoidFn = () => void;
+
+interface HomeContent {
+  name: string;
+  text: string;
+}
