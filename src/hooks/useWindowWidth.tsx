@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function useWindowWidth(): number {
-  const windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+  const windowWidth = typeof window !== "undefined" ? window.innerWidth : 960;
   const [width, setWidth] = useState(windowWidth);
 
   useEffect(() => {
