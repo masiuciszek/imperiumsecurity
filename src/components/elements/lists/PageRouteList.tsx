@@ -1,6 +1,5 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-
 import styled from "styled-components";
 import { below, handleFlex } from "../../../utils/helpers";
 import { HoverLink } from "../../styled/Links";
@@ -23,19 +22,26 @@ const FlexListStyles = styled(animated.ul)`
 
 const ColumnListStyles = styled(animated.ul)`
   position: fixed;
-  top: -18px;
+  top: -1rem;
   right: 0;
+  left: 0;
   ${handleFlex("column", "center", "center")};
-  height: 40%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   background: ${(props) => props.theme.colors.rgbaDark};
   border: 1px solid ${({ theme }) => theme.colors.text};
   z-index: 2;
   li {
-    padding: 1em;
+    padding: 1em 0;
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-right: 2rem;
+    display: block;
+    text-align: center;
   }
   a {
-    font-size: 2em;
+    display: inline;
+    font-size: 1.5em;
     color: ${({ theme }) => theme.colors.text};
   }
   ${below.small`

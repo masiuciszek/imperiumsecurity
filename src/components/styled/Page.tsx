@@ -6,9 +6,9 @@ export const Page = styled.section`
 `;
 
 export const HomeGrid = styled.section`
-  margin: 3em auto;
-  width: 97%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  grid-gap: 2rem;
+  margin: 3em auto 5em auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 `;

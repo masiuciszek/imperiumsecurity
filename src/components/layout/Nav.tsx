@@ -85,11 +85,15 @@ const ContactInfo = styled.a`
   color: ${({ theme }) => theme.colors.button};
   top: 6rem;
   right: 1rem;
+  .small {
+    font-size: 1.1em;
+    text-transform: capitalize;
+  }
   ${above.medium`
     right: 1rem;
-    top: 1rem;
+    top: 9rem;
   `}
-  ${below.small`
+  ${below.medium`
     top: 9rem;
   `}
 `;
@@ -118,7 +122,7 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
         on={isMenuOpen}
       />
 
-      {width <= 960 && (
+      {width < 960 && (
         <FixedIcon
           toggleOn={toggleMenuOpen}
           className="layout-navigation-list-Icon"
@@ -126,7 +130,11 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
         />
       )}
       <ContactInfo href={`mailto: ${pageRoutes.siteMetadata.contact}`}>
-        ✉️{pageRoutes.siteMetadata.contact}
+        {width > 500 ? (
+          <span className="large">✉️{pageRoutes.siteMetadata.contact}</span>
+        ) : (
+          <span className="small">email ✉️ </span>
+        )}
       </ContactInfo>
     </nav>
   );

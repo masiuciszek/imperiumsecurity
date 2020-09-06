@@ -9,7 +9,6 @@ interface FooterListProps {
 }
 
 const FooterList: React.FC<FooterListProps> = ({ className, footerList }) => {
-  console.log(footerList);
   return (
     <ul className={className}>
       {footerList.map(({ name, path }) => (
@@ -41,5 +40,8 @@ export default styled(FooterList)`
     `}
   ${below.small`
       width: 100%;
+      a{
+        font-size: .8em;
+      };
     `}
 `;

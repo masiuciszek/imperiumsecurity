@@ -21,7 +21,7 @@ const RowItem: React.FC<RowContentProps> = ({ className, content, logo }) => {
         <Img fixed={logo.childImageSharp.fixed} />
       </div>
       <div className="content">
-        <h3>{content.name}</h3>
+        <strong>{content.name}</strong>
         <p>{content.text}</p>
       </div>
     </article>
@@ -30,17 +30,14 @@ const RowItem: React.FC<RowContentProps> = ({ className, content, logo }) => {
 
 export default styled(RowItem)`
   ${handleFlex("column", "center", "center")};
-  flex-basis: 100%;
   flex: 1;
+  height: 100%;
   padding: 1em;
-  .logo-img {
-    height: 30%;
-  }
+  margin: 0.5em;
   .content {
-    h3 {
-      text-align: center;
+    strong {
+      font-size: 1.3em;
       text-transform: capitalize;
     }
-    height: 70%;
   }
 `;
