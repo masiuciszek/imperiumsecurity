@@ -18,11 +18,20 @@ const Title: React.FC<TitleProps> = ({
   isCta,
   ctaPath,
 }) => {
+  const handleDashedText = (text: string = "") => {
+    return text.split("-").join(" ");
+  };
+
+  console.log();
   return (
     <section className={className}>
       <h1 data-testid="elements-Title">{title}</h1>
       <p>{subTitle}</p>
-      {isCta && <CtaLink to={`/${ctaPath || ""}`}>{ctaPath || "Home"}</CtaLink>}
+      {isCta && (
+        <CtaLink to={`/${ctaPath || ""}`}>
+          {handleDashedText(ctaPath) || "Home"}
+        </CtaLink>
+      )}
     </section>
   );
 };
@@ -38,6 +47,7 @@ export default styled(Title)`
     background: ${({ theme }) => theme.colors.rgbaDark};
     padding: 0.3em;
     border-radius: ${({ theme }) => theme.borderRadius};
+    width: 12em;
   }
   ${below.small`
     width: 90%;

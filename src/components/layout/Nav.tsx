@@ -9,6 +9,7 @@ import PageRouteList from "../elements/lists/PageRouteList";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import FixedIcon from "../elements/FixedIcon";
 import useToggle from "../../hooks/useToggle";
+import { ContactInfo } from "../styled/Links";
 
 const NAV_QUERY = graphql`
   {
@@ -78,24 +79,6 @@ interface NavProps {
 
 const NavTitle = styled(Link)`
   flex: 1;
-`;
-
-const ContactInfo = styled.a`
-  position: absolute;
-  color: ${({ theme }) => theme.colors.button};
-  top: 6rem;
-  right: 1rem;
-  .small {
-    font-size: 1.1em;
-    text-transform: capitalize;
-  }
-  ${above.medium`
-    right: 1rem;
-    top: 9rem;
-  `}
-  ${below.medium`
-    top: 9rem;
-  `}
 `;
 
 const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {

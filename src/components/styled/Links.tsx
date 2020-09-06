@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { above, below } from "../../utils/helpers";
 
 export const HoverLink = styled(Link)`
   text-transform: capitalize;
@@ -34,15 +35,35 @@ export const CtaLink = styled(HoverLink)`
   border-radius: ${({ theme }) => theme.borderRadius};
   background: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
-  width: 8em;
+  width: 14em;
   margin: 1em auto;
+  padding: 0.2em 0.7em;
+  font-size: 1.2rem;
   &:hover {
     color: ${(props) => props.theme.colors.background};
-    width: 8.25em;
+    width: 13.5em;
     background: ${({ theme }) => theme.colors.text};
     &:after {
       width: 100%;
       padding: 0.1rem;
     }
   }
+`;
+
+export const ContactInfo = styled.a`
+  position: absolute;
+  color: ${({ theme }) => theme.colors.button};
+  top: 6rem;
+  right: 1rem;
+  .small {
+    font-size: 1.1em;
+    text-transform: capitalize;
+  }
+  ${above.medium`
+    right: 1rem;
+    top: 9rem;
+  `}
+  ${below.medium`
+    top: 9rem;
+  `}
 `;

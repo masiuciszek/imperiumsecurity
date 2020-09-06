@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ className, image, children, large }) => {
       childImageSharp: { fluid: DefaultImage },
     },
   } = useStaticQuery<HeroQueryType>(HERO_QUERY);
-  console.log(large);
+
   return (
     <BackgroundImage
       Tag="section"
