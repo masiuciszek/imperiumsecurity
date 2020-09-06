@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { IFixedObject } from "gatsby-background-image";
-import { above, below, handleFlex } from "../../utils/helpers";
+import { handleFlex } from "../../utils/helpers";
 import PageRouteList from "../elements/lists/PageRouteList";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import FixedIcon from "../elements/FixedIcon";

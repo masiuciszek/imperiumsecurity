@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { below, handleFlex } from "../../../utils/helpers";
 import { HoverLink } from "../../styled/Links";
@@ -10,7 +10,7 @@ interface FlexListProps {
   on: boolean;
 }
 
-const FlexListStyles = styled(animated.ul)`
+const FlexListStyles = styled(motion.ul)`
   flex: 1;
   ${handleFlex("row", "space-between", "center")};
   padding: 1.5em 0.5em;
@@ -20,7 +20,7 @@ const FlexListStyles = styled(animated.ul)`
   }
 `;
 
-const ColumnListStyles = styled(animated.ul)`
+const ColumnListStyles = styled(motion.ul)`
   position: fixed;
   top: -1rem;
   right: 0;
@@ -50,11 +50,10 @@ const ColumnListStyles = styled(animated.ul)`
 `;
 
 const FlexList: React.FC<FlexListProps> = ({ onPageRoutes, pageWidth, on }) => {
-  const { opacity, x } = useSpring({
-    opacity: on ? 1 : 0,
-    x: on ? 0 : 100,
-  });
-
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "100%" },
+  };
   return pageWidth >= 960 ? (
     <FlexListStyles>
       {onPageRoutes.map(({ name, path }) => (
@@ -64,12 +63,7 @@ const FlexList: React.FC<FlexListProps> = ({ onPageRoutes, pageWidth, on }) => {
       ))}
     </FlexListStyles>
   ) : (
-    <ColumnListStyles
-      style={{
-        opacity,
-        transform: x.interpolate((x) => `translate3d(${x * 1}%,0 ,0)`),
-      }}
-    >
+    <ColumnListStyles animate={on ? "open" : "closed"} variants={variants}>
       {onPageRoutes.map(({ name, path }) => (
         <li key={path}>
           <HoverLink to={path}>{name}</HoverLink>

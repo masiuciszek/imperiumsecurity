@@ -36,14 +36,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <Label htmlFor="efternamn">
             <span>Efternamn</span>
           </Label>
-          <Input type="text" placeholder="Goran" name="efternamn" />
+          <Input type="text" placeholder="Pandzic" name="efternamn" />
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="epost">
             <span>epost</span>
           </Label>
-          <Input type="email" placeholder="Goran" name="epost" />
+          <Input type="email" placeholder="goran@example.com" name="epost" />
         </FormGroup>
 
         <FormGroup>

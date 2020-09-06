@@ -46,14 +46,16 @@ const RequirementWrapper: React.FC<RequirementWrapperProps> = ({
       transition={{ duration: 2 }}
     >
       <Content>
-        <ContactInfo href={`mailto: ${onContactEmail}`} className="contactInfo">
-          ✉️ <span>{onContactEmail}</span>
-        </ContactInfo>
-
         <h3>Dessa uppgifter behöver vi av dig:</h3>
         <p>
           Vi söker ständigt efter duktiga medarbetare, du är alltid välkommen
-          att skicka in en intresseanmälan till info@imperiumsecurity.nu
+          att skicka in en intresseanmälan till{" "}
+          <ContactInfo
+            href={`mailto: ${onContactEmail}`}
+            className="contactInfo"
+          >
+            ✉️ <span>{onContactEmail}</span>
+          </ContactInfo>
         </p>
         <ul>
           <li>namn</li>
@@ -69,10 +71,10 @@ const RequirementWrapper: React.FC<RequirementWrapperProps> = ({
 
 export default styled(RequirementWrapper)`
   .contactInfo {
+    position: static;
     z-index: 5;
-    top: 0.5rem;
     background: ${({ theme: { colors } }) => colors.background};
-    padding: 0.5em;
+    padding: 0.1em;
     border-radius: ${({ theme }) => theme.borderRadius};
     box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
     transition: ${({ theme: { transition } }) => transition.mainTransition};
@@ -80,8 +82,7 @@ export default styled(RequirementWrapper)`
     &:hover {
       background: ${({ theme: { colors } }) => colors.text};
       color: ${({ theme: { colors } }) => colors.background};
-      padding: 0.4em;
-      border: 3px solid ${({ theme: { colors } }) => colors.button};
+      border: 2px solid ${({ theme: { colors } }) => colors.button};
     }
     ${below.small`
       span{

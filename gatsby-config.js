@@ -5,7 +5,7 @@ module.exports = {
     author: `@masiuciszek`,
     titleTemplate: "%s · Imperium Security",
     url: "https://www.imperiumsecurity.nu/", // No trailing slash allowed!
-    image: "/images/security.png", // Path to your image you placed in the 'static' folder
+    image: "/images/logo2.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@CiszekMarcell",
     contact: "info@imperiumsecurity.nu",
     pageRoutes: [
@@ -74,7 +74,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/security.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo2.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
