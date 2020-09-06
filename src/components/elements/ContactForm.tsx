@@ -24,6 +24,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         data-netlify="true"
         name="contact"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <FormGroup>
           <Label htmlFor="förnamn">
             <span>Förnamn</span>
@@ -50,7 +51,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             <span>meddalnde</span>
           </Label>
 
-          <Text name="epost">Lämna oss ett meddalande</Text>
+          <Text name="epost"></Text>
         </FormGroup>
 
         <BtnSubmit>Kontakta oss</BtnSubmit>
