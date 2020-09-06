@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import { below, handleFlex } from "../../utils/helpers";
+import { below, handleDashedText, handleFlex } from "../../utils/helpers";
 import { CtaLink } from "../styled/Links";
 interface TitleProps {
   className: string;
@@ -18,17 +18,12 @@ const Title: React.FC<TitleProps> = ({
   isCta,
   ctaPath,
 }) => {
-  const handleDashedText = (text: string = "") => {
-    return text.split("-").join(" ");
-  };
-
-  console.log();
   return (
     <section className={className}>
       <h1 data-testid="elements-Title">{title}</h1>
       <p>{subTitle}</p>
       {isCta && (
-        <CtaLink to={`/${ctaPath || ""}`}>
+        <CtaLink to={`/${ctaPath || ""}`} className="ctalink">
           {handleDashedText(ctaPath) || "Home"}
         </CtaLink>
       )}
@@ -44,12 +39,26 @@ export default styled(Title)`
     text-shadow: 2px 3px 3px #333;
     text-align: center;
     color: #fff;
-    background: ${({ theme }) => theme.colors.rgbaDark};
     padding: 0.3em;
     border-radius: ${({ theme }) => theme.borderRadius};
     width: 12em;
   }
+  .ctalink {
+    border: 2px solid ${({ theme }) => theme.colors.button};
+  }
   ${below.small`
     width: 90%;
+    h1{
+      font-size: 1.8em;
+
+    }
+    .ctalink{
+      font-size: 1em;
+      width: 75%;
+
+    }
+    h1{
+      width: 100%;
+    }
   `}
 `;

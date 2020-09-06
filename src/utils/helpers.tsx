@@ -16,6 +16,10 @@ const size: Size = {
   xLarge: 1400,
 } as const;
 
+export const handleDashedText = (text: string = "") => {
+  return text.split("-").join(" ");
+};
+
 type CssParams = Parameters<typeof css>;
 type StyleFnMap = Record<keyof Size, (...args: CssParams) => any>;
 

@@ -1,65 +1,50 @@
-/* eslint-disable no-unused-vars */
 import { graphql, PageProps } from "gatsby";
 import { IFluidObject } from "gatsby-background-image";
-import { string } from "prop-types";
-import * as React from "react";
+import React from "react";
+import ContactForm from "../components/elements/ContactForm";
 import Hero from "../components/elements/Hero";
-import RequirementWrapper from "../components/elements/RequirementWrapper";
 import Title from "../components/elements/Title";
-
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Page } from "../components/styled/Page";
 
-interface ContactPageData {
-  ContactHero: {
+interface WorkWithUsPageProps {
+  WorkWithUsHero: {
     childImageSharp: {
       fluid: IFluidObject;
     };
   };
-  site: {
-    siteMetadata: {
-      contact: string;
-    };
-  };
 }
 
-const ContactPage: React.FC<PageProps<ContactPageData>> = ({ data }) => {
+const WorkWithUsPage: React.FC<PageProps<WorkWithUsPageProps>> = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Kontakta oss" />
-      <Hero className="contactpage-hero" image={data.ContactHero}>
+      <SEO title="kontakta oss" />
+      <Hero className="kontakta-oss-hero" image={data.WorkWithUsHero}>
         <Title
-          className="contact-us-title"
-          title="kontakta oss"
+          className="kontakta-oss-title"
+          title="Kontakta oss"
           isCta
           ctaPath="arbeta-med-oss"
         />
       </Hero>
       <Page>
-        <RequirementWrapper
-          className="contact-page-requirement-wrapper"
-          onContactEmail={data.site.siteMetadata.contact}
-        />
+        <ContactForm className="contact-form-main" />
       </Page>
     </Layout>
   );
 };
-export const CONTACT_PAGE_QUERY = graphql`
+
+export const WORK_WITH_US_PAGE_QUERY = graphql`
   {
-    ContactHero: file(relativePath: { eq: "contact-banner.jpg" }) {
+    WorkWithUsHero: file(relativePath: { eq: "together.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    site {
-      siteMetadata {
-        contact
-      }
-    }
   }
 `;
 
-export default ContactPage;
+export default WorkWithUsPage;
