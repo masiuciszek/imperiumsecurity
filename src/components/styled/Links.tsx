@@ -58,6 +58,14 @@ export const ContactInfo = styled.a`
   .small {
     font-size: 1.1em;
     text-transform: capitalize;
+    ${above.small`
+      display: none;
+    `}
+  }
+  .large {
+    ${below.small`
+      display:none;
+    `}
   }
   ${above.medium`
     right: 1rem;

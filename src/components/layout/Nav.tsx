@@ -5,11 +5,12 @@ import Img from "gatsby-image";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { IFixedObject } from "gatsby-background-image";
 import { handleFlex } from "../../utils/helpers";
-import PageRouteList from "../elements/lists/PageRouteList";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import FixedIcon from "../elements/FixedIcon";
 import useToggle from "../../hooks/useToggle";
 import { ContactInfo } from "../styled/Links";
+import LargeScreen from "../elements/lists/LargeScreen";
+import MobileList from "../elements/lists/MobileList";
 
 const NAV_QUERY = graphql`
   {
@@ -99,25 +100,22 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
         <Img fixed={fixed} />
       </NavTitle>
 
-      <PageRouteList
-        pageWidth={width}
+      <LargeScreen onPageRoutes={pageRoutes.siteMetadata.pageRoutes} />
+      <MobileList
         onPageRoutes={pageRoutes.siteMetadata.pageRoutes}
         on={isMenuOpen}
       />
 
-      {width < 960 && (
-        <FixedIcon
-          toggleOn={toggleMenuOpen}
-          className="layout-navigation-list-Icon"
-          icon={lightIcon.node}
-        />
-      )}
+      <FixedIcon
+        toggleOn={toggleMenuOpen}
+        className="layout-navigation-list-Icon"
+        icon={lightIcon.node}
+      />
+
       <ContactInfo href={`mailto: ${pageRoutes.siteMetadata.contact}`}>
-        {width > 500 ? (
-          <span className="large">✉️{pageRoutes.siteMetadata.contact}</span>
-        ) : (
-          <span className="small">email ✉️ </span>
-        )}
+        <span className="large">✉️{pageRoutes.siteMetadata.contact}</span>
+
+        <span className="small">email ✉️ </span>
       </ContactInfo>
     </nav>
   );

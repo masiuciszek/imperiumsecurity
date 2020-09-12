@@ -6,8 +6,8 @@ import { HoverLink } from "../../styled/Links";
 
 interface FlexListProps {
   onPageRoutes: PageRoutes[];
-  pageWidth: number;
   on: boolean;
+  pageWidth: number;
 }
 
 const FlexListStyles = styled(motion.ul)`
