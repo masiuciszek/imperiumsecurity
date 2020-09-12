@@ -2,12 +2,13 @@
 import { graphql, PageProps } from "gatsby";
 import { IFixedObject } from "gatsby-background-image";
 import * as React from "react";
+import CaptureText from "../components/CaptureText";
 import Hero from "../components/elements/Hero";
 import Title from "../components/elements/Title";
 import Layout from "../components/layout";
 import RowItem from "../components/RowItem";
 import SEO from "../components/seo";
-import { HomeGrid, Page } from "../components/styled/Page";
+import { HomeGrid } from "../components/styled/Page";
 
 interface HomePageQueryType {
   imperiumSmallLogo: {
@@ -19,6 +20,7 @@ interface HomePageQueryType {
     siteMetadata: {
       title: string;
       homeContent: HomeContent[];
+      homeCapture: HomeCapture;
     };
   };
 }
@@ -34,7 +36,10 @@ const IndexPage: React.FC<PageProps<HomePageQueryType>> = ({ data }) => (
         ctaPath="kontakt"
       />
     </Hero>
-
+    <CaptureText
+      captureTitle={data.homeData.siteMetadata.homeCapture.title}
+      captureText={data.homeData.siteMetadata.homeCapture.text}
+    />
     <HomeGrid>
       {data.homeData.siteMetadata.homeContent.map((content) => (
         <RowItem
@@ -62,6 +67,10 @@ export const HOMEPAGE_QUERY = graphql`
         title
         homeContent {
           name
+          text
+        }
+        homeCapture {
+          title
           text
         }
       }

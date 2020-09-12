@@ -18,10 +18,16 @@ module.exports = {
         path: "/kontakt",
       },
       {
-        name: "arbeta med oss",
-        path: "/arbeta-med-oss",
+        name: "arbeta for oss",
+        path: "/arbeta-for-oss",
       },
     ],
+    homeCapture: {
+      title: "våra tjänster",
+      text:
+        "Imperium Security är ett företag som är baserat i Göteborg och erbjuder tjänster för hela västra Sverige. Vi lägger stor fokus på service,förtroende och trygghet för våra kunder och utför våra jobb med en noggrannhet. För våra nuvarande och framtida medarbetare vill vi erbjuda en trivsam arbetsplats.",
+    },
+
     homeContent: [
       {
         name: "ordningsvakt",

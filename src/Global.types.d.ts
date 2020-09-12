@@ -9,3 +9,7 @@ interface HomeContent {
   name: string;
   text: string;
 }
+interface HomeCapture {
+  title: string;
+  text: string;
+}

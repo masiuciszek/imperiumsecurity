@@ -6,9 +6,10 @@ export const Page = styled.section`
 `;
 
 export const HomeGrid = styled.section`
-  margin: 3em auto 5em auto;
+  margin: 5rem auto;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  padding: 1em;
 `;

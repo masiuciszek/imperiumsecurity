@@ -36,8 +36,11 @@ export default styled(RowItem)`
   margin: 0.5em;
   .content {
     strong {
-      font-size: 1.3em;
+      font-size: 1.1em;
       text-transform: capitalize;
+    }
+    p {
+      font-size: 0.9em;
     }
   }
 `;
