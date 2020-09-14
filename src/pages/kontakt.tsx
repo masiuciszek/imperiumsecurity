@@ -25,7 +25,7 @@ const WorkWithUsPage: React.FC<PageProps<WorkWithUsPageProps>> = ({ data }) => {
           className="kontakta-oss-title"
           title="Kontakta oss"
           isCta
-          ctaPath="arbeta-med-oss"
+          ctaPath="arbeta-for-oss"
         />
       </Hero>
       <Page>
