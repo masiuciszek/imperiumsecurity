@@ -37,7 +37,8 @@ export default styled(RowItem)`
   .content {
     strong {
       font-size: 1.1em;
-      text-transform: capitalize;
+      text-transform: uppercase;
+      border-bottom: 3px solid ${({ theme }) => theme.colors.button};
     }
     p {
       font-size: 0.9em;

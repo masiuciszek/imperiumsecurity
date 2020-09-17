@@ -15,7 +15,7 @@ const StyledCapture = styled(motion.section)`
   ${handleFlex("column", "center", "center")};
   h2 {
     text-transform: capitalize;
-    border-bottom: 2px solid ${({ theme: { colors } }) => colors.text};
+    border-bottom: 2px solid ${({ theme: { colors } }) => colors.button};
   }
   p {
     line-height: 2.2rem;
@@ -33,8 +33,8 @@ const CaptureText: React.FC<CaptureTextProps> = ({
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h2>{captureTitle}</h2>
       <p>{captureText}</p>
+      <h2>{captureTitle}</h2>
     </StyledCapture>
   );
 };

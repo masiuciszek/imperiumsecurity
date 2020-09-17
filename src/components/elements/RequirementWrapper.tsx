@@ -57,7 +57,7 @@ const RequirementWrapper: React.FC<RequirementWrapperProps> = ({
             ✉️ <span>{onContactEmail}</span>
           </ContactInfo>
         </p>
-        <ul>
+        <ul className="list">
           <li>namn</li>
           <li>personnummer</li>
           <li>Vilka utbildningar du har (utbildningsbevis)</li>
@@ -70,6 +70,9 @@ const RequirementWrapper: React.FC<RequirementWrapperProps> = ({
 };
 
 export default styled(RequirementWrapper)`
+  p {
+    line-height: 2rem;
+  }
   .contactInfo {
     position: static;
     z-index: 5;
@@ -79,15 +82,20 @@ export default styled(RequirementWrapper)`
     box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
     transition: ${({ theme: { transition } }) => transition.mainTransition};
     border: 2px solid transparent;
+
     &:hover {
       background: ${({ theme: { colors } }) => colors.text};
       color: ${({ theme: { colors } }) => colors.background};
       border: 2px solid ${({ theme: { colors } }) => colors.button};
     }
-    ${below.small`
-      span{
+    @media (max-width: 700px) {
+      span {
         display: none;
       }
-    `}
+    }
+  }
+  .list,
+  li {
+    list-style: square;
   }
 `;

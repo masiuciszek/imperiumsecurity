@@ -38,6 +38,7 @@ const NAV_QUERY = graphql`
     }
     pageRoutes: site {
       siteMetadata {
+        title
         contact
         pageRoutes {
           name
@@ -68,6 +69,7 @@ interface NavQueryType {
   };
   pageRoutes: {
     siteMetadata: {
+      title: string;
       contact: string;
       pageRoutes: PageRoutes[];
     };
@@ -113,9 +115,8 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
       />
 
       <ContactInfo href={`mailto: ${pageRoutes.siteMetadata.contact}`}>
-        <span className="large">✉️{pageRoutes.siteMetadata.contact}</span>
-
-        <span className="small">email ✉️ </span>
+        <span className="large"> {pageRoutes.siteMetadata.title} ✉️</span>
+        <span className="small">{pageRoutes.siteMetadata.title} ✉️ </span>
       </ContactInfo>
     </nav>
   );

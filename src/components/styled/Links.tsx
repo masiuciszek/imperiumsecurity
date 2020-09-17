@@ -56,13 +56,14 @@ export const ContactInfo = styled.a`
   top: 6rem;
   right: 1rem;
   .small {
-    font-size: 1.1em;
+    font-size: 0.9em;
     text-transform: capitalize;
     ${above.small`
       display: none;
     `}
   }
   .large {
+    font-size: 1.1em;
     ${below.small`
       display:none;
     `}

@@ -29,21 +29,21 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <Label htmlFor="förnamn">
             <span>Förnamn</span>
           </Label>
-          <Input type="text" placeholder="Goran" name="förnamn" />
+          <Input type="text" placeholder="Förnamn" name="förnamn" />
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="efternamn">
             <span>Efternamn</span>
           </Label>
-          <Input type="text" placeholder="Pandzic" name="efternamn" />
+          <Input type="text" placeholder="Efternamn" name="efternamn" />
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="epost">
             <span>epost</span>
           </Label>
-          <Input type="email" placeholder="goran@example.com" name="epost" />
+          <Input type="email" placeholder="användar@example.com" name="epost" />
         </FormGroup>
 
         <FormGroup>
