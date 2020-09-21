@@ -115,8 +115,8 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
       />
 
       <ContactInfo href={`mailto: ${pageRoutes.siteMetadata.contact}`}>
-        <span className="large"> {pageRoutes.siteMetadata.title} ✉️</span>
-        <span className="small">{pageRoutes.siteMetadata.title} ✉️ </span>
+        <span className="large"> {pageRoutes.siteMetadata.contact} ✉️ </span>
+        <span className="small">{pageRoutes.siteMetadata.contact} ✉️ </span>
       </ContactInfo>
     </nav>
   );

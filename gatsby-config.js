@@ -14,12 +14,12 @@ module.exports = {
         path: "/",
       },
       {
-        name: "kontakt",
+        name: "kontakta oss",
         path: "/kontakt",
       },
       {
-        name: "arbeta for oss",
-        path: "/arbeta-for-oss",
+        name: "jobba hos oss",
+        path: "/jobba-hos-oss",
       },
     ],
     homeCapture: {
