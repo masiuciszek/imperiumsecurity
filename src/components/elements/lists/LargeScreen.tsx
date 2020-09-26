@@ -14,6 +14,7 @@ const FlexListStyles = styled.ul`
   max-width: 40em;
   a {
     color: ${({ theme }) => theme.colors.text};
+    text-transform: none;
   }
   ${above.medium`
     ${handleFlex("row", "space-between", "center")};

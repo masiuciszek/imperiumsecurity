@@ -25,7 +25,7 @@ module.exports = {
     homeCapture: {
       title: "våra tjänster",
       text:
-        "Imperium Security är ett företag som är baserat i Göteborg och erbjuder tjänster för hela västra Sverige. Vi lägger stor fokus på service,förtroende och trygghet för våra kunder och utför våra jobb med en noggrannhet. För våra nuvarande och framtida medarbetare vill vi erbjuda en trivsam arbetsplats.",
+        "Imperium Security är ett godkänt auktoriserat bevakningsföretag av Länsstyrelsen, som finns i Göteborg och erbjuder tjänster för hela Västsverige. Vi lägger stor fokus på service, förtroende och trygghet för våra kunder och utför våra jobb med en noggrannhet.",
     },
 
     homeContent: [
