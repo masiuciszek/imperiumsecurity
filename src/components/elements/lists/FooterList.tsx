@@ -34,6 +34,7 @@ export default styled(FooterList)`
     margin: 0;
     padding: 0;
     display: inline-block;
+    text-transform: none;
   }
   ${below.medium`
       width: 90%;

@@ -58,6 +58,7 @@ export default styled(MobileList)`
     display: inline;
     font-size: 1.5em;
     color: ${({ theme }) => theme.colors.text};
+    text-transform: none;
   }
   ${above.medium`
     display: none;

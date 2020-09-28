@@ -45,6 +45,7 @@ export default styled(Title)`
   }
   .ctalink {
     border: 2px solid ${({ theme }) => theme.colors.button};
+    text-transform: none;
   }
   ${below.small`
     width: 90%;
