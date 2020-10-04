@@ -47,7 +47,7 @@ const WorkWithUsPage: React.FC<PageProps<ContactPageData>> = ({ data }) => {
 };
 export const CONTACT_PAGE_QUERY = graphql`
   {
-    WorkWithUsHero: file(relativePath: { eq: "camera.jpg" }) {
+    WorkWithUsHero: file(relativePath: { eq: "together.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp

@@ -37,7 +37,7 @@ const WorkWithUsPage: React.FC<PageProps<WorkWithUsPageProps>> = ({ data }) => {
 
 export const WORK_WITH_US_PAGE_QUERY = graphql`
   {
-    WorkWithUsHero: file(relativePath: { eq: "together.jpg" }) {
+    WorkWithUsHero: file(relativePath: { eq: "gbg-bild.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
