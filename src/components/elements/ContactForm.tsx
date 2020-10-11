@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { handleFlex } from "../../utils/helpers";
@@ -8,9 +9,33 @@ interface ContactFormProps {
   className?: string;
 }
 
+const MAIL_QUERY = graphql`
+  {
+    mailId: site {
+      siteMetadata {
+        mail
+      }
+    }
+  }
+`;
+
+interface Mail {
+  mailId: {
+    siteMetadata: {
+      mail: string;
+    };
+  };
+}
+
 const ContactForm: React.FC<ContactFormProps> = ({
   className = "contact-form",
 }) => {
+  const {
+    mailId: {
+      siteMetadata: { mail },
+    },
+  } = useStaticQuery<Mail>(MAIL_QUERY);
+
   return (
     <motion.section
       className={className}
@@ -19,9 +44,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
       transition={{ duration: 2 }}
     >
       <Form
-        method="post"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
+        // method="post"
+        // netlify-honeypot="bot-field"
+        // data-netlify="true"
+        method="POST"
+        action={`https://getform.io/f/${mail}`}
         name="contact"
       >
         <input type="hidden" name="form-name" value="contact" />
@@ -51,7 +78,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             <span>meddalnde</span>
           </Label>
 
-          <Text name="epost"></Text>
+          <Text name="meddalnde"></Text>
         </FormGroup>
 
         <BtnSubmit>Kontakta oss</BtnSubmit>
