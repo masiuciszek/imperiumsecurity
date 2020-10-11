@@ -15,15 +15,15 @@ module.exports = {
     mail: process.env.MAIL_ID,
     pageRoutes: [
       {
-        name: "hem",
+        name: "Hem",
         path: "/",
       },
       {
-        name: "kontakta oss",
+        name: "Kontakta oss",
         path: "/kontakt",
       },
       {
-        name: "jobba hos oss",
+        name: "Jobba hos oss",
         path: "/jobba-hos-oss",
       },
     ],

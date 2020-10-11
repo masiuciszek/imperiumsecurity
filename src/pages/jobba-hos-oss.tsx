@@ -31,7 +31,7 @@ const WorkWithUsPage: React.FC<PageProps<ContactPageData>> = ({ data }) => {
       <Hero className="contactpage-hero" image={data.WorkWithUsHero}>
         <Title
           className="contact-us-title"
-          title="Arbeta med oss"
+          title="Jobba hos oss"
           isCta
           ctaPath="kontakt"
         />
