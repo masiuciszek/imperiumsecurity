@@ -38,6 +38,8 @@ function SEO({ title, desc, image, article }: Props) {
     url: `${siteMetadata.url}${pathname}`,
   };
 
+  // TODO: Check
+
   return (
     <Helmet title={seo.title} titleTemplate={siteMetadata.titleTemplate}>
       <meta name="description" content={seo.desc} />
