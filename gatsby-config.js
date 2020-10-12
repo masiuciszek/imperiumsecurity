@@ -13,6 +13,7 @@ module.exports = {
     twitterUsername: "@CiszekMarcell",
     contact: "info@imperiumsecurity.nu",
     mail: process.env.MAIL_ID,
+
     pageRoutes: [
       {
         name: "Hem",

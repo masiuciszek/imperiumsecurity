@@ -12,7 +12,6 @@ const FlexListStyles = styled.ul`
   display: none;
   padding: 1.5em 0.5em;
   max-width: 40em;
-
   a {
     color: ${({ theme }) => theme.colors.text};
     text-transform: none;

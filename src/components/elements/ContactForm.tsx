@@ -36,6 +36,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
     },
   } = useStaticQuery<Mail>(MAIL_QUERY);
 
+  console.log(mail);
+
   return (
     <motion.section
       className={className}

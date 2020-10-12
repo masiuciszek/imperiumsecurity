@@ -5,6 +5,7 @@ describe("<Test/>", () => {
   test("should render title with title and subTitle", async () => {
     const mainTitle = "mainTitle";
     const subTitle = "subTitle";
+
     render(
       <Title className="test-title" title={mainTitle} subTitle={subTitle} />
     );
