@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Imperium Security`,
-    description: ``,
+    description: `s`,
     author: `@masiuciszek`,
     titleTemplate: "%s · Imperium Security",
     url: "https://www.imperiumsecurity.nu/", // No trailing slash allowed!
