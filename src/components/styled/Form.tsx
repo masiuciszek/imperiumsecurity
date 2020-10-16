@@ -32,8 +32,8 @@ export const Input = styled.input`
   outline: 0;
   &:focus {
     box-shadow: ${({ theme }) => theme.shadow.elevations[5]};
-    width: 97%;
     border: 2px solid ${({ theme }) => theme.colors.background};
+    width: 97%;
   }
   ${below.small`
     margin: 0 auto;
@@ -61,6 +61,10 @@ export const Text = styled.textarea`
   font-size: 18px;
   box-shadow: ${({ theme }) => theme.shadow.elevations[1]};
   border-radius: ${({ theme }) => theme.borderRadius};
+  &:focus {
+    box-shadow: ${({ theme }) => theme.shadow.elevations[5]};
+    border: 2px solid ${({ theme }) => theme.colors.background};
+  }
 `;
 
 export const BtnSubmit = styled.button`

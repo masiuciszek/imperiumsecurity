@@ -1,13 +1,19 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Imperium Security`,
-    description: ``,
+    description: `s`,
     author: `@masiuciszek`,
     titleTemplate: "%s · Imperium Security",
     url: "https://www.imperiumsecurity.nu/", // No trailing slash allowed!
     image: "/images/logo2.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@CiszekMarcell",
     contact: "info@imperiumsecurity.nu",
+    mail: process.env.MAIL_ID,
+
     pageRoutes: [
       {
         name: "Hem",
