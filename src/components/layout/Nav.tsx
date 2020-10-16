@@ -113,11 +113,6 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
         className="layout-navigation-list-Icon"
         icon={lightIcon.node}
       />
-
-      <ContactInfo href={`mailto: ${pageRoutes.siteMetadata.contact}`}>
-        <span className="large"> {pageRoutes.siteMetadata.contact} ✉️ </span>
-        <span className="small">{pageRoutes.siteMetadata.contact} ✉️ </span>
-      </ContactInfo>
     </nav>
   );
 };
@@ -128,3 +123,10 @@ export default styled(Nav)`
   ${handleFlex("row", "space-between", "center")};
   position: relative;
 `;
+
+{
+  /* <ContactInfo href={`mailto: ${pageRoutes.siteMetadata.contact}`}>
+        <span className="large"> {pageRoutes.siteMetadata.contact} ✉️ </span>
+        <span className="small">{pageRoutes.siteMetadata.contact} ✉️ </span>
+      </ContactInfo> */
+}

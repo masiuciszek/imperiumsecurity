@@ -29,7 +29,6 @@ const Content = styled.div`
     color: ${({ theme }) => theme.colors.background};
   }
   li {
-    text-transform: capitalize;
     padding: 0.5em 0;
   }
 `;
@@ -49,7 +48,7 @@ const RequirementWrapper: React.FC<RequirementWrapperProps> = ({
         <h3>Dessa uppgifter behöver vi av dig:</h3>
         <p>
           Vi söker ständigt efter duktiga medarbetare, du är alltid välkommen
-          att skicka in en intresseanmälan till{" "}
+          att skicka in en intresseanmälan till <br />
           <ContactInfo
             href={`mailto: ${onContactEmail}`}
             className="contactInfo"
@@ -58,8 +57,8 @@ const RequirementWrapper: React.FC<RequirementWrapperProps> = ({
           </ContactInfo>
         </p>
         <ul className="list">
-          <li>namn</li>
-          <li>personnummer</li>
+          <li>Namn</li>
+          <li>Personnummer</li>
           <li>Vilka utbildningar du har (utbildningsbevis)</li>
           <li>Kontaktuppgifter</li>
           <li>Bild (frivilligt)</li>
@@ -94,8 +93,9 @@ export default styled(RequirementWrapper)`
       }
     }
   }
-  .list,
-  li {
-    list-style: square;
+  .list {
+    li {
+      list-style: square;
+    }
   }
 `;

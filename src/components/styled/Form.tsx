@@ -75,7 +75,6 @@ export const BtnSubmit = styled.button`
   border: 2px solid ${({ theme }) => theme.colors.button};
   padding: 0.4em;
   transition: ${({ theme }) => theme.transition.mainTransition};
-  text-transform: capitalize;
   box-shadow: ${({ theme }) => theme.shadow.elevations[3]};
   &:hover {
     box-shadow: ${({ theme }) => theme.shadow.elevations[4]};

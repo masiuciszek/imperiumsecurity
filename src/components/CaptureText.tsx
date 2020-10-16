@@ -14,7 +14,6 @@ const StyledCapture = styled(motion.section)`
   padding: 1em;
   ${handleFlex("column", "center", "center")};
   h2 {
-    text-transform: capitalize;
     border-bottom: 2px solid ${({ theme: { colors } }) => colors.button};
   }
   p {
@@ -26,7 +25,6 @@ const CaptureText: React.FC<CaptureTextProps> = ({
   captureText,
   captureTitle,
 }) => {
-  const variants = {};
   return (
     <StyledCapture
       initial={{ opacity: 0, x: "-1000%" }}

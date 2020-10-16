@@ -26,17 +26,17 @@ const ContactForm: React.FC<ContactFormProps> = ({
       >
         <input type="hidden" name="form-name" value="contact" />
         <FormGroup>
-          <Label htmlFor="förnamn">
-            <span>Förnamn</span>
+          <Label htmlFor="namn">
+            <span>namn</span>
           </Label>
-          <Input type="text" placeholder="Förnamn" name="förnamn" />
+          <Input type="text" placeholder="namn" name="namn" />
         </FormGroup>
 
         <FormGroup>
-          <Label htmlFor="efternamn">
-            <span>Efternamn</span>
+          <Label htmlFor="telefonnummer">
+            <span>telefonnummer</span>
           </Label>
-          <Input type="text" placeholder="Efternamn" name="efternamn" />
+          <Input type="number" placeholder="070*******" name="telefonnummer" />
         </FormGroup>
 
         <FormGroup>
@@ -54,7 +54,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <Text name="epost"></Text>
         </FormGroup>
 
-        <BtnSubmit>Kontakta oss</BtnSubmit>
+        <BtnSubmit>kontakta oss</BtnSubmit>
       </Form>
     </motion.section>
   );

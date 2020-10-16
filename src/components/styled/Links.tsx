@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { above, below } from "../../utils/helpers";
 
 export const HoverLink = styled(Link)`
-  text-transform: capitalize;
   display: block;
   position: relative;
   transition: ${({ theme }) => theme.transition.mainTransition};
@@ -57,7 +56,6 @@ export const ContactInfo = styled.a`
   right: 1rem;
   .small {
     font-size: 0.9em;
-    text-transform: capitalize;
     ${above.small`
       display: none;
     `}

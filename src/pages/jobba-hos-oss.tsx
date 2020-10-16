@@ -33,7 +33,7 @@ const WorkWithUsPage: React.FC<PageProps<ContactPageData>> = ({ data }) => {
           className="contact-us-title"
           title="Arbeta med oss"
           isCta
-          ctaPath="kontakt"
+          ctaPath="kontakta oss"
         />
       </Hero>
       <Page>

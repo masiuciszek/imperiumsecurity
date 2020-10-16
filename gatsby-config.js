@@ -10,15 +10,15 @@ module.exports = {
     contact: "info@imperiumsecurity.nu",
     pageRoutes: [
       {
-        name: "hem",
+        name: "Hem",
         path: "/",
       },
       {
-        name: "kontakta oss",
+        name: "Kontakta oss",
         path: "/kontakt",
       },
       {
-        name: "jobba hos oss",
+        name: "Jobba hos oss",
         path: "/jobba-hos-oss",
       },
     ],
