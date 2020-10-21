@@ -70,7 +70,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <Label htmlFor="epost">
             <span>epost</span>
           </Label>
-          <Input type="email" placeholder="användar@example.com" name="epost" />
+          <Input type="email" placeholder="användare@example" name="epost" />
         </FormGroup>
 
         <FormGroup>
