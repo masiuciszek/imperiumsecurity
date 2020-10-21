@@ -33,7 +33,7 @@ const IndexPage: React.FC<PageProps<HomePageQueryType>> = ({ data }) => (
         className="homepage-title"
         title={data.homeData.siteMetadata.title}
         isCta
-        ctaPath="kontakt"
+        ctaPath="Kontakt"
       />
     </Hero>
     <CaptureText
