@@ -44,9 +44,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
       transition={{ duration: 2 }}
     >
       <Form
-        // method="post"
-        // netlify-honeypot="bot-field"
-        // data-netlify="true"
         method="POST"
         action={`https://getform.io/f/${mail}`}
         name="contact"
@@ -54,34 +51,38 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <input type="hidden" name="form-name" value="contact" />
         <FormGroup>
           <Label htmlFor="namn">
-            <span>namn</span>
+            <span>Namn</span>
           </Label>
           <Input type="text" placeholder="namn" name="namn" />
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="telefonnummer">
-            <span>telefonnummer</span>
+            <span>Telefonnummer</span>
           </Label>
           <Input type="number" placeholder="070*******" name="telefonnummer" />
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="epost">
-            <span>epost</span>
+            <span>E-post</span>
           </Label>
-          <Input type="email" placeholder="användare@example" name="epost" />
+          <Input
+            type="email"
+            placeholder="användare@example.com"
+            name="epost"
+          />
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="meddalnde">
-            <span>meddalnde</span>
+            <span>Meddelande</span>
           </Label>
 
           <Text name="meddalnde"></Text>
         </FormGroup>
 
-        <BtnSubmit>kontakta oss</BtnSubmit>
+        <BtnSubmit>Kontakta oss</BtnSubmit>
       </Form>
     </motion.section>
   );

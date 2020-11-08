@@ -92,7 +92,6 @@ const Nav: React.FC<NavProps> = ({ className = "main-navigation" }) => {
     pageRoutes,
     menuIcons,
   } = useStaticQuery<NavQueryType>(NAV_QUERY);
-  const width = useWindowWidth();
   const [darkIcon, lightIcon] = menuIcons.edges;
   const [isMenuOpen, toggleMenuOpen] = useToggle();
 

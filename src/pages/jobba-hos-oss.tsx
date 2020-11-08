@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { graphql, PageProps } from "gatsby";
 import { IFluidObject } from "gatsby-background-image";
-import { string } from "prop-types";
 import * as React from "react";
 import Hero from "../components/elements/Hero";
 import RequirementWrapper from "../components/elements/RequirementWrapper";
